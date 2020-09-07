@@ -1,0 +1,30 @@
+% read image
+clc;
+clear all;
+I = imread('E:\\1-archana\\vol_2\\fig\\jpg\\non_court\\3.jpg');
+
+%rgb conversion
+
+r= I(:,:,1);
+b= I(:,:,2);
+g= I(:,:,3);
+
+
+a=imhist(r)  ;
+
+b=imhist(b);
+
+c=imhist(g);
+
+% combine 
+
+d=a+b+c;
+
+% plot in curve
+
+plot(d);
+
+
+% plot in graph
+
+hist(d);
